@@ -1,4 +1,4 @@
-import { Platform, StyleSheet } from 'react-native';
+import { Alert, Platform, StyleSheet } from 'react-native';
 
 import { Image } from 'expo-image';
 import { Link } from 'expo-router';
@@ -49,19 +49,19 @@ export default function HomeScreen() {
             <Link.MenuAction
               title="Action"
               icon="cube"
-              onPress={() => alert('Action pressed')}
+              onPress={() => Alert.alert('Action pressed')}
             />
             <Link.MenuAction
               title="Share"
               icon="square.and.arrow.up"
-              onPress={() => alert('Share pressed')}
+              onPress={() => Alert.alert('Share pressed')}
             />
             <Link.Menu title="More" icon="ellipsis">
               <Link.MenuAction
                 title="Delete"
                 icon="trash"
                 destructive
-                onPress={() => alert('Delete pressed')}
+                onPress={() => Alert.alert('Delete pressed')}
               />
             </Link.Menu>
           </Link.Menu>
