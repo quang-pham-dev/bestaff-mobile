@@ -1,0 +1,14 @@
+{
+  "name": "@bestaff/typescript-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./base.json": "./base.json",
+    "./react-native-library.json": "./react-native-library.json",
+    "./react-library.json": "./react-library.json"
+  }
+}

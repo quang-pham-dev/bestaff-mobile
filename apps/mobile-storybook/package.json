@@ -1,0 +1,53 @@
+{
+  "name": "mobile-storybook",
+  "main": "expo-router/entry",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "expo start",
+    "dev": "expo start",
+    "reset-project": "node ./scripts/reset-project.js",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "lint": "expo lint",
+    "lint:fix": "expo lint --fix",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf node_modules .expo"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "catalog:expo54",
+    "@react-navigation/bottom-tabs": "catalog:react-navigation",
+    "@react-navigation/elements": "catalog:react-navigation",
+    "@react-navigation/native": "catalog:react-navigation",
+    "expo": "catalog:expo54",
+    "expo-constants": "catalog:expo54",
+    "expo-font": "catalog:expo54",
+    "expo-haptics": "catalog:expo54",
+    "expo-image": "catalog:expo54",
+    "expo-linking": "catalog:expo54",
+    "expo-router": "catalog:expo54",
+    "expo-splash-screen": "catalog:expo54",
+    "expo-status-bar": "catalog:expo54",
+    "expo-symbols": "catalog:expo54",
+    "expo-system-ui": "catalog:expo54",
+    "expo-web-browser": "catalog:expo54",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19",
+    "react-native": "catalog:react-native",
+    "react-native-gesture-handler": "catalog:react-native",
+    "react-native-worklets": "catalog:react-native",
+    "react-native-reanimated": "catalog:react-native",
+    "react-native-safe-area-context": "catalog:react-native",
+    "react-native-screens": "catalog:react-native",
+    "react-native-web": "catalog:react-native"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:react19",
+    "typescript": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-expo": "catalog:eslint-plugins"
+  },
+  "private": true
+}

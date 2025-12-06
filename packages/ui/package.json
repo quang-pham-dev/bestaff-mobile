@@ -1,0 +1,38 @@
+{
+  "name": "@bestaff/ui",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./*": "./src/*.tsx"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist node_modules",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --max-warnings 0 --fix",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@bestaff/eslint-config": "workspace:*",
+    "@bestaff/prettier-config": "workspace:*",
+    "@bestaff/typescript-config": "workspace:*",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:react19",
+    "@types/react-dom": "catalog:react19",
+    "eslint": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  },
+  "dependencies": {
+    "@bestaff/hooks": "workspace:*",
+    "@bestaff/theme": "workspace:*",
+    "@bestaff/utils": "workspace:*",
+    "expo-av": "catalog:expo54",
+    "react": "catalog:react19",
+    "react-dom": "catalog:react19"
+  }
+}

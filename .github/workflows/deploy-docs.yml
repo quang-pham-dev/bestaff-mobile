@@ -1,0 +1,62 @@
+# =============================================================================
+# DEPLOY DOCS WORKFLOW - CURRENTLY DISABLED
+# =============================================================================
+#
+# This workflow is currently disabled because:
+# - The referenced apps/docs does not exist in this repository
+# - Current apps are: mobile-app, mobile-storybook
+#
+# To enable this workflow in the future:
+# 1. Create a documentation app (e.g., using Docusaurus, VitePress, or similar)
+# 2. Update the `paths` filter to match the docs app path
+# 3. Update the `--filter` flag to match the docs app name
+# 4. Configure Vercel secrets (VERCEL_TOKEN, VERCEL_ORG_ID, VERCEL_PROJECT_ID)
+# 5. Remove the `if: false` condition from the job
+#
+# =============================================================================
+
+name: Deploy Docs
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      # Uncomment when docs app is created:
+      # - "apps/docs/**"
+
+jobs:
+  deploy:
+    name: Deploy Documentation
+    runs-on: ubuntu-latest
+    # DISABLED: Remove this line when docs app is ready
+    if: false
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build documentation
+        run: pnpm turbo run build --filter=docs
+
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: "--prod"

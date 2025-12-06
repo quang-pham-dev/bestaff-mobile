@@ -1,0 +1,37 @@
+{
+  "name": "@bestaff/eslint-config",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "description": "ESLint configurations for bestaff projects",
+  "keywords": [
+    "eslint",
+    "config",
+    "typescript",
+    "react",
+    "react-native"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist node_modules"
+  },
+  "exports": {
+    "./base": "./base.js",
+    "./react-internal": "./react-internal.js",
+    "./react-native-library": "./react-native-library.js"
+  },
+  "devDependencies": {
+    "@eslint/js": "catalog:",
+    "eslint": "catalog:",
+    "@react-native/eslint-config": "catalog:eslint-plugins",
+    "eslint-config-prettier": "catalog:eslint-plugins",
+    "eslint-plugin-only-warn": "catalog:eslint-plugins",
+    "eslint-plugin-react": "catalog:eslint-plugins",
+    "eslint-plugin-react-native": "catalog:eslint-plugins",
+    "eslint-plugin-storybook": "catalog:eslint-plugins",
+    "eslint-plugin-react-hooks": "catalog:eslint-plugins",
+    "eslint-plugin-turbo": "catalog:eslint-plugins",
+    "globals": "catalog:eslint-plugins",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:eslint-plugins"
+  }
+}

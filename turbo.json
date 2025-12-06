@@ -1,0 +1,156 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "globalDependencies": [
+    "**/.env",
+    "**/.env.*"
+  ],
+  "globalEnv": [],
+  "globalPassThroughEnv": [
+    "NODE_ENV",
+    "ENVIRONMENT",
+    "SERVICE_NAME",
+    "APP_NAME",
+    "APP_VERSION",
+    "npm_package_version",
+    "LOG_LEVEL",
+    "LOG_PRETTY",
+    "EXPO_OS",
+    "EXPO_PUBLIC_API_URL"
+  ],
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "build/**",
+        "node_modules/.cache/metro/**"
+      ]
+    },
+    "build:packages": {
+      "dependsOn": [
+        "^build:packages"
+      ],
+      "outputs": [
+        "build/packages/**"
+      ]
+    },
+    "format": {
+      "dependsOn": [
+        "^format"
+      ]
+    },
+    "format:fix": {
+      "dependsOn": [
+        "^format:fix"
+      ],
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "lint:fix": {
+      "dependsOn": [
+        "^lint:fix"
+      ],
+      "cache": false
+    },
+    "check-types": {
+      "dependsOn": [
+        "^check-types"
+      ]
+    },
+    "dev": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
+      "cache": false
+    },
+    "changeset": {
+      "dependsOn": [
+        "^changeset"
+      ]
+    },
+    "version-packages": {
+      "dependsOn": [
+        "^version-packages"
+      ]
+    },
+    "release": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": []
+    },
+    "preview-storybook": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": false
+    },
+    "test": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "src/**/*.tsx",
+        "src/**/*.ts",
+        "test/**/*.ts",
+        "test/**/*.tsx"
+      ]
+    },
+    "test:watch": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "test:coverage": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "coverage/**"
+      ]
+    },
+    "test:ui": {
+      "dependsOn": [
+        "^build"
+      ],
+      "cache": false,
+      "persistent": true
+    },
+    "e2e": {
+      "dependsOn": [
+        "build"
+      ],
+      "outputs": []
+    },
+    "e2e:ui": {
+      "dependsOn": [
+        "^e2e:ui"
+      ],
+      "outputs": []
+    },
+    "codegen": {
+      "outputs": [
+        "packages/ui/generated/**"
+      ]
+    }
+  }
+}

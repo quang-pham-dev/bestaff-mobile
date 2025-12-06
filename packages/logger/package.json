@@ -1,0 +1,44 @@
+{
+  "name": "@bestaff/logger",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    },
+    "./*": "./src/*.{ts,tsx}"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --max-warnings 0 --fix",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "generate:component": "turbo gen react-component",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "devDependencies": {
+    "@bestaff/eslint-config": "workspace:*",
+    "@bestaff/typescript-config": "workspace:*",
+    "@bestaff/prettier-config": "workspace:*",
+    "@types/node": "catalog:",
+    "eslint": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:testing",
+    "@vitest/ui": "catalog:testing"
+  },
+  "dependencies": {
+    "pino": "catalog:logger-libs",
+    "pino-pretty": "catalog:logger-libs",
+    "pino-http": "catalog:logger-libs",
+    "pino-abstract-transport": "catalog:logger-libs",
+    "sonic-boom": "catalog:logger-libs"
+  }
+}

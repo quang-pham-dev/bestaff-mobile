@@ -1,0 +1,17 @@
+{
+  "name": "@bestaff/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./base": "./base.js",
+    "./react-native-library": "./react-native-library.js"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "catalog:prettier-plugins",
+    "prettier": "catalog:"
+  }
+}

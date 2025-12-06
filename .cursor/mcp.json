@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "expo-mcp": {
+      "url": "https://mcp.expo.dev/mcp",
+      "headers": {}
+    },
+    "radon-ai": {
+      "url": "http://127.0.0.1:50325/mcp",
+      "type": "http",
+      "headers": {
+        "nonce": "5fdd0f73-b474-4c2e-b668-a92a8a82332d"
+      }
+    }
+  }
+}

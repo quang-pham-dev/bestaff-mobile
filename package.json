@@ -1,0 +1,87 @@
+{
+  "name": "bestaff-mobile",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Quang Pham",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "tooling/*"
+  ],
+  "scripts": {
+    "dev": "turbo watch dev",
+    "dev:mobile": "turbo watch dev --filter bestaff-mobile-app",
+    "dev:storybook": "turbo watch dev --filter mobile-storybook",
+    "dev:packages": "turbo watch dev --filter \"./packages/*\"",
+    "mobile:start": "turbo run start --filter bestaff-mobile-app",
+    "mobile:ios": "pnpm --filter bestaff-mobile-app ios",
+    "mobile:ios:prod": "pnpm --filter bestaff-mobile-app ios:prod",
+    "mobile:android": "pnpm --filter bestaff-mobile-app android",
+    "mobile:android:prod": "pnpm --filter bestaff-mobile-app android:prod",
+    "mobile:web": "pnpm --filter bestaff-mobile-app web",
+    "mobile:prebuild": "pnpm --filter bestaff-mobile-app prebuild",
+    "mobile:fix-deps": "pnpm --filter bestaff-mobile-app fix-deps",
+    "mobile:export": "pnpm --filter bestaff-mobile-app export",
+    "build": "turbo run build",
+    "build:apps": "turbo run build --filter=\"./apps/*\"",
+    "build:packages": "turbo run build --filter=\"./packages/*\"",
+    "build:mobile": "turbo run build --filter bestaff-mobile-app",
+    "test": "turbo run test",
+    "test:watch": "turbo run test -- --watch",
+    "test:coverage": "turbo run test:coverage",
+    "test:mobile": "pnpm --filter bestaff-mobile-app test",
+    "test:logger": "pnpm --filter @bestaff/logger test",
+    "test:logger:ui": "pnpm --filter @bestaff/logger test:ui",
+    "test:logger:coverage": "pnpm --filter @bestaff/logger test:coverage",
+    "e2e": "turbo run e2e",
+    "e2e:mobile": "pnpm --filter bestaff-mobile-app e2e",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint:fix",
+    "lint:mobile": "turbo run lint --filter bestaff-mobile-app",
+    "lint:packages": "turbo run lint --filter \"./packages/*\"",
+    "format": "turbo run format",
+    "format:fix": "turbo run format:fix",
+    "check-types": "turbo run check-types",
+    "type-check": "turbo run check-types",
+    "pkg:ui:build": "turbo run build --filter @bestaff/ui",
+    "pkg:hooks:build": "turbo run build --filter @bestaff/hooks",
+    "pkg:theme:build": "turbo run build --filter @bestaff/theme",
+    "pkg:utils:build": "turbo run build --filter @bestaff/utils",
+    "pkg:logger:build": "turbo run build --filter @bestaff/logger",
+    "generate:component": "turbo gen react-component",
+    "codegen": "turbo run codegen",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "clean:workspaces": "turbo run clean",
+    "clean:turbo": "rm -rf .turbo && turbo run clean",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "changeset version && pnpm -r build && changeset publish",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "@commitlint/cli": "^20.1.0",
+    "@commitlint/config-conventional": "^20.0.0",
+    "@bestaff/prettier-config": "workspace:*",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "husky": "catalog:",
+    "lint-staged": "catalog:",
+    "@turbo/gen": "catalog:",
+    "turbo": "catalog:"
+  },
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "prettier": "@bestaff/prettier-config/base"
+}
