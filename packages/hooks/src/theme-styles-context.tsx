@@ -6,7 +6,7 @@ import {
   createStyleUtils,
 } from '@bestaff/utils/create-styles';
 
-import { useTheme } from './useTheme';
+import { useTheme } from './use-theme';
 
 export interface ThemeStylesContextType {
   styles: ThemeStyles;

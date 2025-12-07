@@ -1,6 +1,6 @@
 {
   "name": "@bestaff/logger",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "exports": {
     ".": {
@@ -14,12 +14,12 @@
     "dev": "tsup --watch",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --max-warnings 0 --fix",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-    "test": "vitest",
+    "test": "vitest run",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage"
   },

@@ -1,7 +1,7 @@
 {
   "name": "mobile-storybook",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "expo start",
     "dev": "expo start",
@@ -11,8 +11,8 @@
     "web": "expo start --web",
     "lint": "expo lint",
     "lint:fix": "expo lint --fix",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf node_modules .expo"
   },

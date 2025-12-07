@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { ThemeStylesContext } from './ThemeStylesContext';
+import { ThemeStylesContext } from './theme-styles-context';
 
 /**
  * Hook to access the current theme styles.

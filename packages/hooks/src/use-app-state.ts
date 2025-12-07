@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { AppState, type AppStateStatus } from 'react-native';
 
-type UseAppStateProps = {
+export type UseAppStateProps = {
   match: RegExp;
   nextAppState: AppStateStatus;
   callback: () => void;

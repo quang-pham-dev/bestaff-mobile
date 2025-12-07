@@ -8,7 +8,7 @@ import {
   withTiming,
 } from 'react-native-reanimated';
 
-interface EntryAnimationConfig {
+export interface EntryAnimationConfig {
   delay?: number;
   duration?: number;
   type?: 'slide' | 'fade' | 'both';

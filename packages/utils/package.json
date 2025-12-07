@@ -1,6 +1,6 @@
 {
   "name": "@bestaff/utils",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "exports": {
     ".": "./src/index.ts",
@@ -14,8 +14,8 @@
     "lint:fix": "eslint . --max-warnings 0 --fix",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "format": "prettier --check .",
+    "format:fix": "prettier --write ."
   },
   "devDependencies": {
     "@bestaff/eslint-config": "workspace:*",

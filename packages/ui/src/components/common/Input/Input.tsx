@@ -24,8 +24,10 @@ type InputVariant = 'outlined' | 'filled';
  * Props for the Input component
  * Extends React Native's TextInput props with additional functionality
  */
-export interface InputProps
-  extends Omit<TextInputProps, 'placeholderTextColor'> {
+export interface InputProps extends Omit<
+  TextInputProps,
+  'placeholderTextColor'
+> {
   /**
    * Label text to display above the input
    * @example "Email Address"
