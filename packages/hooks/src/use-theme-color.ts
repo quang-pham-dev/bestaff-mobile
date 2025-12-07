@@ -4,9 +4,9 @@
  */
 import { Theme } from '@bestaff/theme';
 
-import { useTheme } from './useTheme';
+import { useTheme } from './use-theme';
 
-type ThemeColorProps = {
+export type ThemeColorProps = {
   light?: string;
   dark?: string;
 };

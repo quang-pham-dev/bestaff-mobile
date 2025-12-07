@@ -16,3 +16,8 @@ ios
 src/locale/locales
 lib/react-compiler-runtime
 coverage
+dist
+build
+.turbo
+.next
+out

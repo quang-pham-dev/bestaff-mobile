@@ -59,8 +59,7 @@ interface ModalBaseProps {
 }
 
 export interface ModalProps
-  extends ModalBaseProps,
-    Omit<RNModalProps, 'animationType'> {
+  extends ModalBaseProps, Omit<RNModalProps, 'animationType'> {
   visible: boolean;
   onRequestClose?: () => void;
   children?: React.ReactNode;

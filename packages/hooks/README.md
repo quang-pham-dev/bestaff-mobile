@@ -17,6 +17,8 @@ Shared React hooks for BestAff Mobile applications.
 - [Theme Hooks](#theme-hooks)
 - [Utility Hooks](#utility-hooks)
 - [Usage Examples](#usage-examples)
+- [Testing](#testing)
+- [Types](#types)
 
 ## 🚀 Installation
 
@@ -167,6 +169,42 @@ export function SearchComponent() {
 
   return <TextInput value={searchTerm} onChangeText={setSearchTerm} />;
 }
+```
+
+## 🧪 Testing
+
+Run tests:
+
+```bash
+# From repository root
+pnpm test:hooks
+
+# From package directory
+pnpm test
+
+# With watch mode
+pnpm test:watch
+
+# With coverage
+pnpm test:coverage
+```
+
+## 📝 Types
+
+This package exports useful TypeScript types:
+
+```typescript
+import type {
+  EntryAnimationConfig,
+  ThemeColorProps,
+  // Theme types
+  ThemeContextType,
+  ThemeStylesContextType,
+  // Utility types
+  UseAppStateProps,
+  VariantFunction,
+  Variants,
+} from '@bestaff/hooks';
 ```
 
 ---

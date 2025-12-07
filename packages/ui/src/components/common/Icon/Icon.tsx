@@ -14,8 +14,10 @@ type IconName = keyof typeof Ionicons.glyphMap;
  * Props for the Icon component
  * Extends Ionicons props with custom theme integration
  */
-export interface IconProps
-  extends Omit<ComponentProps<typeof Ionicons>, 'name'> {
+export interface IconProps extends Omit<
+  ComponentProps<typeof Ionicons>,
+  'name'
+> {
   /**
    * Name of the icon from Ionicons library
    * @see https://icons.expo.fyi

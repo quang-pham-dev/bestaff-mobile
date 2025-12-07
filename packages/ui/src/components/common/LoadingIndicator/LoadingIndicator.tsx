@@ -23,8 +23,10 @@ type LoadingVariant = 'primary' | 'secondary';
  * Props for the LoadingIndicator component
  * Extends ActivityIndicator props excluding color (handled by variant)
  */
-export interface LoadingIndicatorProps
-  extends Omit<ActivityIndicatorProps, 'color'> {
+export interface LoadingIndicatorProps extends Omit<
+  ActivityIndicatorProps,
+  'color'
+> {
   /**
    * Text to display below the loading indicator
    * @example "Loading..."

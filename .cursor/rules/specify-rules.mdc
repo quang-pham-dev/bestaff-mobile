@@ -1,0 +1,29 @@
+# bestaff-mobile Development Guidelines
+
+Auto-generated from all feature plans. Last updated: 2025-12-07
+
+## Active Technologies
+
+- TypeScript 5.9+ with strict mode enabled + React 19, React Native 0.81+, Expo SDK 54, react-native-reanimated (002-hooks-package-update)
+
+## Project Structure
+
+```text
+src/
+tests/
+```
+
+## Commands
+
+npm test && npm run lint
+
+## Code Style
+
+TypeScript 5.9+ with strict mode enabled: Follow standard conventions
+
+## Recent Changes
+
+- 002-hooks-package-update: Added TypeScript 5.9+ with strict mode enabled + React 19, React Native 0.81+, Expo SDK 54, react-native-reanimated
+
+<!-- MANUAL ADDITIONS START -->
+<!-- MANUAL ADDITIONS END -->

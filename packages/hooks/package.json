@@ -1,6 +1,6 @@
 {
   "name": "@bestaff/hooks",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "private": true,
   "exports": {
     ".": "./src/index.ts",
@@ -14,8 +14,12 @@
     "lint:fix": "eslint . --max-warnings 0 --fix",
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore ."
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@bestaff/eslint-config": "workspace:*",
@@ -24,9 +28,12 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:react19",
     "@types/react-dom": "catalog:react19",
+    "@vitest/coverage-v8": "catalog:testing",
+    "@vitest/ui": "catalog:testing",
     "eslint": "catalog:",
     "tsup": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "vitest": "catalog:testing"
   },
   "dependencies": {
     "react": "catalog:react19",

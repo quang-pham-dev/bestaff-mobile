@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import { Theme } from '@bestaff/theme';
 
-import { useTheme } from './useTheme';
+import { useTheme } from './use-theme';
 
 /**
  * Hook to select a specific value from the theme.

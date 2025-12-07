@@ -2,10 +2,10 @@ import { useMemo } from 'react';
 
 import { Theme } from '@bestaff/theme';
 
-import { useTheme } from './useTheme';
+import { useTheme } from './use-theme';
 
-type VariantFunction<T> = (theme: Theme) => T;
-type Variants<T> = {
+export type VariantFunction<T> = (theme: Theme) => T;
+export type Variants<T> = {
   [key: string]: VariantFunction<T>;
 };
 

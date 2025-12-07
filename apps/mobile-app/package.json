@@ -1,7 +1,7 @@
 {
   "name": "bestaff-mobile-app",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "scripts": {
     "start": "expo start",
@@ -21,8 +21,8 @@
     "e2e": "sh ./scripts/e2e-run.sh",
     "web": "expo start --web",
     "fix-deps": "npx expo install --check",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
     "lint": "expo lint",
     "lint:fix": "expo lint --fix",
     "check-types": "tsc --noEmit",
