@@ -1,5 +1,12 @@
 # @bestaff/utils
 
+## 0.0.2
+
+### Patch Changes
+
+- Updated dependencies
+  - @bestaff/theme@0.1.0
+
 ## 0.0.1
 
 ### Patch Changes

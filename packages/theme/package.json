@@ -1,6 +1,6 @@
 {
   "name": "@bestaff/theme",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "exports": {
     ".": "./src/index.ts",
@@ -19,7 +19,10 @@
     "generate:component": "turbo gen react-component",
     "check-types": "tsc --noEmit",
     "format": "prettier --check .",
-    "format:fix": "prettier --write ."
+    "format:fix": "prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "devDependencies": {
     "@bestaff/eslint-config": "workspace:*",

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @bestaff/theme@0.1.0
+  - @bestaff/utils@0.0.2
+
 ## 0.2.0
 
 ### Minor Changes
