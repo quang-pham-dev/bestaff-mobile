@@ -100,7 +100,7 @@ BestAff Mobile is a production-ready React Native mobile application built with 
 1. **Clone the repository**
 
 ```bash
-git clone git@github.com:bestaff-ai-development/bestaff-mobile.git
+git clone git@github.com:quang-pham-dev/bestaff-mobile.git
 cd bestaff-mobile
 ```
 
@@ -373,7 +373,7 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 ### Development Workflow
 
-1. Create a new branch from `main`
+1. Create a new branch from `develop`
 2. Make your changes
 3. Ensure tests pass and code is linted
 4. Commit using conventional commits
@@ -397,6 +397,8 @@ Commits are validated using Commitlint and Husky.
 
 ## 📝 Documentation
 
+- [Architecture Overview](./docs/ARCHITECHTURE.md)
+- [Release Guide](./docs/RELEASE.md)
 - [Mobile App Documentation](./apps/mobile-app/README.md)
 - [Theme Package](./packages/theme/README.md)
 - [Hooks Package](./packages/hooks/README.md)

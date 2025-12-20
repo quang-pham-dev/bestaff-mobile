@@ -151,6 +151,12 @@
       "outputs": [
         "packages/ui/generated/**"
       ]
+    },
+    "devtools": {
+      "cache": false,
+      "dependsOn": [
+        "build"
+      ]
     }
   }
 }
