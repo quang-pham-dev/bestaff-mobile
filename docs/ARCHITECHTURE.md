@@ -56,16 +56,16 @@ The BeStaff Mobile architecture is built on the following core principles:
 ```mermaid
 graph TB
     subgraph "Mobile Application Layer"
-        APP[Mobile App<br/>Expo + React Native]
-        STORY[Storybook<br/>Component Development]
+        APP["Mobile App<br/>Expo + React Native"]
+        STORY["Storybook<br/>Component Development"]
     end
     
     subgraph "Shared Packages Layer"
-        UI[UI Components<br/>@bestaff/ui]
-        THEME[Design System<br/>@bestaff/theme]
-        HOOKS[React Hooks<br/>@bestaff/hooks]
-        UTILS[Utilities<br/>@bestaff/utils]
-        LOGGER[Logging<br/>@bestaff/logger]
+        UI["UI Components<br/>@bestaff/ui"]
+        THEME["Design System<br/>@bestaff/theme"]
+        HOOKS["React Hooks<br/>@bestaff/hooks"]
+        UTILS["Utilities<br/>@bestaff/utils"]
+        LOGGER["Logging<br/>@bestaff/logger"]
     end
     
     subgraph "Tooling Layer"
@@ -180,7 +180,7 @@ bestaff-mobile/
 
 #### Workspace Configuration
 
-**[pnpm-workspace.yaml](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/pnpm-workspace.yaml)**
+**[pnpm-workspace.yaml](../pnpm-workspace.yaml)**
 
 ```yaml
 packages:
@@ -206,7 +206,7 @@ This configuration uses **pnpm catalogs** for dependency version management:
 
 ### 3.3 Turborepo Configuration
 
-**[turbo.json](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/turbo.json)** defines the build pipeline:
+**[turbo.json](../turbo.json)** defines the build pipeline:
 
 ```json
 {
@@ -243,18 +243,18 @@ graph LR
         STORY[mobile-storybook]
     end
     
-    subgraph Core Packages
-        UI[@bestaff/ui]
-        THEME[@bestaff/theme]
-        HOOKS[@bestaff/hooks]
-        UTILS[@bestaff/utils]
-        LOGGER[@bestaff/logger]
+    subgraph "Core Packages"
+        UI["@bestaff/ui"]
+        THEME["@bestaff/theme"]
+        HOOKS["@bestaff/hooks"]
+        UTILS["@bestaff/utils"]
+        LOGGER["@bestaff/logger"]
     end
     
     subgraph Tooling
-        ESL[@bestaff/eslint-config]
-        PRET[@bestaff/prettier-config]
-        TS[@bestaff/typescript-config]
+        ESL["@bestaff/eslint-config"]
+        PRET["@bestaff/prettier-config"]
+        TS["@bestaff/typescript-config"]
     end
     
     APP --> UI
@@ -320,7 +320,7 @@ bestaff-mobile/
 
 ### 4.2 Mobile App Structure
 
-**[apps/mobile-app/](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/apps/mobile-app)**
+**[apps/mobile-app/](../apps/mobile-app)**
 
 ```
 mobile-app/
@@ -345,8 +345,8 @@ mobile-app/
 
 **Key Files:**
 
-- **[app.config.ts](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/apps/mobile-app/app.config.ts)**: Expo configuration (app name, slug, plugins)
-- **[app/_layout.tsx](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/apps/mobile-app/app/_layout.tsx)**: Root layout with theme provider, navigation setup
+- **[app.config.ts](../apps/mobile-app/app.config.ts)**: Expo configuration (app name, slug, plugins)
+- **[app/_layout.tsx](../apps/mobile-app/app/_layout.tsx)**: Root layout with theme provider, navigation setup
 - **eas.json**: EAS Build profiles (development, preview, production)
 
 ### 4.3 Package Structure
@@ -392,7 +392,7 @@ Each package follows a consistent structure:
 
 **Purpose:** Design system foundation with design tokens, theme definitions, and styling utilities.
 
-**Location:** [packages/theme/](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/packages/theme)
+**Location:** [packages/theme/](../packages/theme)
 
 **Structure:**
 
@@ -499,7 +499,7 @@ The theme package includes factory functions for creating consistent styles:
 
 **Purpose:** Shared utility functions and helpers used across the application.
 
-**Location:** [packages/utils/](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/packages/utils)
+**Location:** [packages/utils/](../packages/utils)
 
 **Example Utilities:**
 
@@ -517,7 +517,7 @@ The theme package includes factory functions for creating consistent styles:
 
 **Purpose:** Reusable React hooks for common patterns and functionality.
 
-**Location:** [packages/hooks/](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/packages/hooks)
+**Location:** [packages/hooks/](../packages/hooks)
 
 **Key Hooks:**
 
@@ -562,7 +562,7 @@ function MyComponent() {
 
 **Purpose:** Shared React Native UI component library with consistent design and behavior.
 
-**Location:** [packages/ui/](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/packages/ui)
+**Location:** [packages/ui/](../packages/ui)
 
 **Structure:**
 
@@ -669,7 +669,7 @@ export const useButtonStyles = createStyles((theme) => ({
 
 **Purpose:** Production-ready logging infrastructure with structured logging, multiple transports, and performance optimization.
 
-**Location:** [packages/logger/](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/packages/logger)
+**Location:** [packages/logger/](../packages/logger)
 
 **Features:**
 
@@ -714,25 +714,25 @@ logger.error({ error: err }, 'Failed to fetch data');
 ```mermaid
 graph TB
     subgraph "Presentation Layer"
-        SCREENS[Screens/Pages<br/>app/ directory]
-        COMPONENTS[Components<br/>components/ directory]
+        SCREENS["Screens/Pages<br/>app/ directory"]
+        COMPONENTS["Components<br/>components/ directory"]
     end
     
     subgraph "Business Logic Layer"
-        HOOKS_APP[Custom Hooks<br/>hooks/ directory]
-        SERVICES[Services<br/>API clients, business logic]
+        HOOKS_APP["Custom Hooks<br/>hooks/ directory"]
+        SERVICES["Services<br/>API clients, business logic"]
     end
     
     subgraph "Data Layer"
-        QUERY[TanStack Query<br/>Server state]
-        STORAGE[AsyncStorage<br/>Local persistence]
-        API[REST/GraphQL APIs]
+        QUERY["TanStack Query<br/>Server state"]
+        STORAGE["AsyncStorage<br/>Local persistence"]
+        API["REST/GraphQL APIs"]
     end
     
     subgraph "Shared Packages"
-        PKG_UI[@bestaff/ui]
-        PKG_HOOKS[@bestaff/hooks]
-        PKG_THEME[@bestaff/theme]
+        PKG_UI["@bestaff/ui"]
+        PKG_HOOKS["@bestaff/hooks"]
+        PKG_THEME["@bestaff/theme"]
     end
     
     SCREENS --> HOOKS_APP
@@ -1088,11 +1088,11 @@ export default function ProfileScreen() {
 ```mermaid
 graph TB
     A[pnpm build] --> B{Turborepo}
-    B --> C[Build @bestaff/theme]
-    B --> D[Build @bestaff/utils]
-    C --> E[Build @bestaff/hooks]
+    B --> C["Build @bestaff/theme"]
+    B --> D["Build @bestaff/utils"]
+    C --> E["Build @bestaff/hooks"]
     D --> E
-    C --> F[Build @bestaff/ui]
+    C --> F["Build @bestaff/ui"]
     E --> F
     F --> G[Build mobile-app]
     F --> H[Build mobile-storybook]
@@ -1688,10 +1688,10 @@ types.ts                        # Type definitions
 
 ### Internal Documentation
 
-- [Mobile App README](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/apps/mobile-app/README.md)
-- [Theme Package Documentation](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/packages/theme/README.md)
-- [Hooks Package Documentation](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/packages/hooks/README.md)
-- [Logger Package Documentation](file:///Users/quangpn/Working-space/Project/bestaff/bestaff-mobile/packages/logger/README.md)
+- [Mobile App README](../apps/mobile-app/README.md)
+- [Theme Package Documentation](../packages/theme/README.md)
+- [Hooks Package Documentation](../packages/hooks/README.md)
+- [Logger Package Documentation](../packages/logger/README.md)
 
 ---
 
@@ -1699,7 +1699,7 @@ types.ts                        # Type definitions
 
 | Version | Date | Author | Changes |
 |---------|------|--------|---------|
-| 1.0.0 | 2025-12-01 | Architecture Team | Initial comprehensive architecture document |
+| 1.0.0 | 2025-12-01 | Technical Architecture(Quang Pham) | Initial comprehensive architecture document |
 
 ---
 

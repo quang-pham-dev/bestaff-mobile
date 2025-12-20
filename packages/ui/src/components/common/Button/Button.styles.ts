@@ -1,6 +1,11 @@
 import type { TextStyle, ViewStyle } from 'react-native';
 
-import { type Theme, createStyles } from '@bestaff/theme';
+import {
+  type Theme,
+  createStyles,
+  moderateScale,
+  normalizeFont,
+} from '@bestaff/theme';
 
 /**
  * Button variant styles configuration
@@ -48,20 +53,20 @@ export const buttonTextVariantStyles = {
 };
 
 /**
- * Size variant configuration
+ * Size variant configuration with responsive scaling
  */
 export const buttonSizeStyles = {
   small: (theme: Theme): { padding: number; fontSize: number } => ({
-    padding: theme.spacing.sm,
-    fontSize: 14,
+    padding: moderateScale(theme.spacing.sm),
+    fontSize: normalizeFont(14),
   }),
   medium: (theme: Theme): { padding: number; fontSize: number } => ({
-    padding: theme.spacing.md,
-    fontSize: 16,
+    padding: moderateScale(theme.spacing.md),
+    fontSize: normalizeFont(16),
   }),
   large: (theme: Theme): { padding: number; fontSize: number } => ({
-    padding: theme.spacing.lg,
-    fontSize: 18,
+    padding: moderateScale(theme.spacing.lg),
+    fontSize: normalizeFont(18),
   }),
 };
 
@@ -75,7 +80,8 @@ export const useButtonStyles = createStyles((theme: Theme) => ({
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
-    gap: theme.spacing.xs,
+    gap: moderateScale(theme.spacing.xs),
+    minHeight: 44, // Minimum touch target for accessibility
   },
   text: {
     fontWeight: theme.typography.weights.semibold,
