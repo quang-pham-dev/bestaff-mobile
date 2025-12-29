@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "924221885488",
+    "project_id": "bestaff-55f39",
+    "storage_bucket": "bestaff-55f39.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:924221885488:android:d78e4de417cca50b5a31f5",
+        "android_client_info": {
+          "package_name": "com.bestaff.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2K1MhRsjlATW3kNsUZ5TUtSGJZy9fPI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
